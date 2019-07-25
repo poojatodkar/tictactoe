@@ -1,0 +1,63 @@
+@import "../variables.scss";
+@import "../mixins.scss";
+
+.board {
+  display: flex;
+  flex-wrap: wrap;
+  width: var(--board-size);
+  height: 500px;
+  max-width: 500px;
+}
+
+.board-slot {
+  --dimensions: calc(var(--board-size) / 3);
+  border: var(--grid-border);
+  height: var(--dimensions);
+  width: var(--dimensions);
+  cursor: pointer;
+
+  &:nth-child(-n + 3) {
+    border-top: 0;
+  }
+
+  &:nth-last-child(-n + 3) {
+    border-bottom: 0;
+  }
+
+  &:nth-child(3n + 1) {
+    border-left: 0;
+  }
+
+  &:nth-child(3n) {
+    border-right: 0;
+  }
+}
+
+.board-slot:hover:not(.filled) {
+  @include background-transition(150ms);
+}
+
+.filled {
+  @include background-transition();
+}
+
+.filled.winner {
+  animation: win infinite alternate ease-in-out .54s;
+}
+
+@keyframes win {
+  0% {
+    background-size: 40%;
+  }
+
+  100% {
+    background-size: 50%;
+  }
+}
+
+@media (max-width: 550px) {
+  .board {
+    max-width: 300px;
+    height: 300px;
+  }
+}

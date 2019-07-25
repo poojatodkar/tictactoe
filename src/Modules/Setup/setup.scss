@@ -1,0 +1,49 @@
+.setup-page {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+.setup-page input, .setup-page button {
+  width: 100%;
+}
+
+.setup-page input {
+  margin-top: 5px; 
+}
+
+.setup-page label {
+  margin-top: 25px;
+}
+
+.collumn {
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+.setup-page {
+  .player {
+    align-self: center;
+    margin: 20px 0;
+  }
+
+  .player [class*="icon"] {
+    margin: 0 auto;
+    width: 140px;
+    height: 140px;
+  }
+
+  input {
+    width: 90%;
+    margin: 10px auto;
+    display: block;
+    font-size: 16px;
+    outline: 0;
+    color: #000;
+    background: #fff;
+    
+    &::placeholder {
+      color: #000;
+    }
+  }
+}

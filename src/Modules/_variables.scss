@@ -1,0 +1,15 @@
+:root {
+  --board-size: 100%;
+  --grid-border: 2px solid rgba(255, 255, 255, .5);
+  --base-color: #34495e;
+}
+
+@media only screen and (min-device-width : 768px) {
+  :root {
+    --board-size: 100%;
+  }
+}
+
+$base-color: #34495e;
+$danger-color: #e74c3c;
+$success-color: #0330DD;

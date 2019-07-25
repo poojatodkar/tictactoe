@@ -1,0 +1,28 @@
+@import "../variables.scss";
+@import "../mixins.scss";
+
+.leader-board {
+  font-size: 1em;
+  font-weight: 300;
+  padding: 10px 30px;
+  margin: 0 auto;
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  li {
+    border-bottom: 1px solid $base-color + 40%;
+    padding: 20px;
+  }
+
+  span {
+    color: #04007F;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
