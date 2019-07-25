@@ -41,7 +41,8 @@
     "watch-css": "npm run build-css && node-sass src/ -o src/ --watch --recursive",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "prod": "NODE_ENV=production node server.js"
+    "prod": "NODE_ENV=production node server.js",
+    "heroku-postbuild": "ng build --prod"
   },
   "browserslist": {
     "production": [
