@@ -8,6 +8,10 @@
     "game",
     "tic-tac-toe"
   ],
+  "engines": {
+    "npm": "5.6.0",
+    "node": "8.9.4"
+  },
   "dependencies": {
     "bootstrap": "^4.3.1",
     "express": "^4.17.1",
